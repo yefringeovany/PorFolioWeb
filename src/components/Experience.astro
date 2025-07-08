@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "2020-2021",
+    title: "Asistente de Gestión Administrativa y Tecnológica",
+    company: "Centro Cultural T-21",
+    description:
+      "Responsable de apoyar la operación administrativa y técnica del centro educativo mediante el uso de herramientas digitales. Encargado del manejo eficiente del sistema de inventario, control y supervisión del sistema interno del centro, así como la creación, validación y análisis de reportes administrativos. Esta experiencia fortaleció mis habilidades en organización, análisis de datos y uso de software para gestión institucional.",
+  },
+  {
+    date: "Actualmente..",
+    title: "Instructor de Tecnologías de la Información y Desarrollo de Software",
+    company: "Liceo Nuevo Milenio",
+    description:
+      "Encargado de impartir clases de programación y computación, integrando teoría y práctica a través de proyectos aplicados. Responsable del diseño e implementación de contenidos educativos adaptados al nivel de los alumnos, con énfasis en lógica computacional, estructuras de datos y desarrollo de software. Superviso y evalúo proyectos prácticos para fomentar un aprendizaje significativo y medir el progreso en habilidades técnicas. Mi labor docente ha contribuido a mantener una alta tasa de aprobación en evaluaciones finales, impulsando el pensamiento lógico, la resolución de problemas y el desarrollo de competencias clave en tecnologías de la información.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

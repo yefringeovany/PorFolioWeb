@@ -1,0 +1,185 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Link from "./icons/Link.astro"
+import LinkButton from "./LinkButton.astro"
+import ReactIcon from "./icons/React.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import Express from "./icons/Express.astro"
+import JavaScript from "./icons/JavaScript.astro"
+import MySQL from "./icons/MySQL.astro"
+import Angular from "./icons/Angular.astro"
+import Bootstrap from "./icons/Bootstrap.astro"
+import SQL from "./icons/SQL.astro"
+import firebase from "./icons/firebase.astro"
+import PM2 from "./icons/pm2.astro"
+import npm from "./icons/npm.astro"
+import mongoDB from "./icons/mongoDB.astro"
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React.js",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: ReactIcon,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: NodeJS,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: Express,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: JavaScript,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: MySQL,
+  },
+   ANGULAR: {
+    name: "Angular",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: Angular,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: Bootstrap,
+  },
+  SQL: {
+    name: "SQL Server",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: SQL,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: firebase,
+  },
+   PM2: {
+    name: "PM2",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: PM2,
+  },
+    npm: {
+    name: "NPM",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: npm,
+  },
+     mongoDB: {
+    name: "MongoDB",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: mongoDB,
+  },
+      GitHub: {
+    name: "GitHub",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: GitHub,
+  },
+}
+
+const PROJECTS = [
+  {
+    title: "Sistema de Gestión de Pedidos",
+    description:
+      "Sistema multiplataforma para la gestión eficiente de pedidos en restaurantes, que permite registrar órdenes, administrar menús y coordinar la preparación y entrega de alimentos desde dispositivos móviles y computadoras.",
+    link: "https://project-g-restaurant-1.onrender.com",
+    github: "https://github.com/yefringeovany/Project_G_Restaurant.git",
+    image: "/projects/Proyecto.png",
+    tags: [TAGS.NODE, TAGS.EXPRESS, TAGS.JAVASCRIPT, TAGS.MYSQL, TAGS.ANGULAR, TAGS.BOOTSTRAP],
+  },
+  {
+    title: "Data WareHouse - SSIS, SSAS, Reporting Services",
+    description:
+      "Este proyecto consiste en la creación de un Data Warehouse utilizando Microsoft Visual Studio con la herramienta SQL Server Integration Services (SSIS). El objetivo principal es integrar, transformar y cargar datos desde diversas fuentes hacia un entorno de almacenamiento optimizado para análisis.",
+    github: "https://github.com/yefringeovany/Datawerehouse-ETL-SSAS-SSIS-Reporting-Services.git",
+    image: "/projects/SSAS.png",
+    tags: [TAGS.SQL,],
+  },
+  {
+    title: "Sistema IoT de Monitoreo  Temperatura para Control de Riego",
+    description:
+      "El sistema permite monitorear la temperatura y humedad en tiempo real, activando automáticamente una bomba de agua cuando las condiciones ambientales lo requieren. También se ofrece control manual a través de una aplicación conectada a internet.",
+    link: "https://finish-proyect-telecomunicaciones-1.onrender.com/",
+    github: "https://github.com/yefringeovany/finish-proyect-telecomunicaciones.git",
+    image: "/projects/IOT.png",
+    tags: [TAGS.NODE, TAGS.REACT, TAGS.FIREBASE, TAGS.PM2, TAGS.npm],
+  },
+  {
+    title: "Table-Motocycles",
+    description:
+      "Es una aplicación que refleja el uso de un stack simple (Node.js, React, MongoDB, etc.), cuyo propósito es realizar un registro de los tipos de motocicletas en el stack, para asi mismo poder escalar el software.",
+    github: "https://github.com/yefringeovany/Table-yefrin.git",
+    image: "/projects/motocycles.png",
+    tags: [TAGS.NODE, TAGS.REACT, TAGS.mongoDB, TAGS.GitHub],
+  },
+
+  
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center text-current`}
+                  >
+                    <tag.icon class="w-6 h-6 transition-transform duration-300 hover:scale-125 hover:text-yellow-400" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="w-6 h-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="w-6 h-6" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
