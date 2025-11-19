@@ -16,6 +16,10 @@ import firebase from "./icons/firebase.astro"
 import PM2 from "./icons/pm2.astro"
 import npm from "./icons/npm.astro"
 import mongoDB from "./icons/mongoDB.astro"
+import SocketIO from "./icons/SocketIO.astro"
+import JWT from "./icons/JWT.astro"
+import Sequelize from "./icons/Sequelize.astro"
+
 const TAGS = {
   NEXT: {
     name: "Next.js",
@@ -92,6 +96,21 @@ const TAGS = {
     class: "bg-[#20232a] text-[#61dafb]",
     icon: GitHub,
   },
+     SocketIO: {
+    name: "Socket.IO",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: SocketIO,
+  },
+    JWT: {
+    name: "JsonWebTokens",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: JWT,
+  },
+    Sequelize: {
+    name: "Sequelize",
+    class: "bg-[#20232a] text-[#61dafb]",
+    icon: Sequelize,
+  },
 }
 
 const PROJECTS = [
@@ -129,8 +148,15 @@ const PROJECTS = [
     image: "/projects/motocycles.png",
     tags: [TAGS.NODE, TAGS.REACT, TAGS.mongoDB, TAGS.GitHub],
   },
-
-  
+  {
+    title: "Sistema de Gestión Visual de Turnos para Pacientes",
+    description:
+      "Es una aplicación desarrollada con Node.js, React, SQL Server, WebSocket, Socket.IO, JWT y Sequelize, orientada a la gestión clínica en tiempo real. Permite registrar y asignar turnos clínicos en tiempo real, Su arquitectura en tiempo real garantiza un flujo operativo eficiente, seguro y escalable para la administración de turnos.",
+    link: "https://project-desarrolloweb-1.onrender.com/login",
+    github: "https://github.com/yefringeovany/Project-DesarrolloWeb.git",
+    image: "/projects/Turnos.png",
+    tags: [TAGS.NODE, TAGS.REACT, TAGS.SQL, TAGS.GitHub, TAGS.SocketIO, TAGS.Sequelize],
+  },  
 ]
 ---
 
